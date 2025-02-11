@@ -4,8 +4,8 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main', 
-                    credentialsId: 'git-token', 
-                    url: 'https://git-token@github.com/yourusername/Jenkins-Timestamp.git'
+                    credentialsId: 'github-username-PAT', 
+                    url: 'https://github-username-PAT@github.com/yourusername/Jenkins-Timestamp.git'
             }
         }
         stage('Compile Java Program') {
